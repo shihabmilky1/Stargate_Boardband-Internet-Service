@@ -1,0 +1,15 @@
+.futures-card{
+    transition: .3s;
+}
+.futures-card:hover{
+    background:#339AF0;
+    color: #fff;
+    transform: translateY(10px);
+}
+.futures-card:hover p  {
+    color: #fff !important;
+
+}
+.futures-card:hover .features-icon  {
+    color: #fff !important;
+}

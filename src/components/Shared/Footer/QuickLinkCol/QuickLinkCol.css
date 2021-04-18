@@ -1,0 +1,10 @@
+.footerLink-nav li {
+    margin: 5px 0;
+}
+.footerLink-nav li a{
+color: #fff;
+text-decoration: none;
+}
+footer li a:hover{
+    text-decoration: underline;
+}

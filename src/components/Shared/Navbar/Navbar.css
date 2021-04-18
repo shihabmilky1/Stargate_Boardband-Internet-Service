@@ -1,0 +1,7 @@
+.my-nav ul li a:hover {
+    color: #339AF0;
+}
+.my-nav ul li a , .navbar-brand{
+    color: #fff;
+    font-weight: bold;
+}
