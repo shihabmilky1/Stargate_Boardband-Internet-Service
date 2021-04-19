@@ -30,7 +30,7 @@ const Book = () => {
             service,
             process: 'Pending'
         }
-        fetch('http://localhost:5000/orderService', {
+        fetch('http://localhost:3001/orderService', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(bookingDetail)
@@ -43,7 +43,7 @@ const Book = () => {
             })
     };
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${serviceName}`)
+        fetch(`http://localhost:3001/service/${serviceName}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])

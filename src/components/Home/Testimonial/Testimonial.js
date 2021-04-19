@@ -6,7 +6,7 @@ import TestimonialCard from '../TestimonialCard/TestimonialCard';
 const Testimonial = () => {
     const [customerFeedback,serCustomerFeedback] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/getFeedback')
+        fetch('http://localhost:3001/getFeedback')
         .then(res => res.json())
         .then(data => serCustomerFeedback(data))
     },[])

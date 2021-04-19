@@ -5,7 +5,7 @@ import {  faHandshake} from '@fortawesome/free-solid-svg-icons'
 const Contact = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/contact',{
+        fetch('http://localhost:3001/contact',{
             method: 'POST',
             headers:{'Content-Type': 'application/json'},
             body: JSON.stringify(data)

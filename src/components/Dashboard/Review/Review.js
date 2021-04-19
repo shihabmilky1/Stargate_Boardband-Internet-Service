@@ -11,7 +11,7 @@ const Review = () => {
     const [imageURL, setImageURL] = useState(null)
     const [uploading,setUploading] = useState(false)
     const onSubmit = data => {
-        fetch('http://localhost:5000/feedback',{
+        fetch('http://localhost:3001/feedback',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({data,...loginUser,image:imageURL})

@@ -7,7 +7,7 @@ const BookingList = () => {
     const [loginUser, setLoginUser] = useContext(UserContext)
     const [bookingList, setBookingList] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/getOrder?email=' + loginUser.email)
+        fetch('http://localhost:3001/getOrder?email=' + loginUser.email)
             .then(res => res.json())
             .then(data => setBookingList(data))
     }, [bookingList])

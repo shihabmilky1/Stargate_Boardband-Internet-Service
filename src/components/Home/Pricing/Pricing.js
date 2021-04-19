@@ -5,7 +5,7 @@ import PricingCard from '../PricingCard/PricingCard';
 const Pricing = () => {
     const [pricingCard,setPricingCard] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/service')
+        fetch('http://localhost:3001/service')
         .then(res => res.json())
         .then(data => setPricingCard(data))
     },[])
