@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
@@ -19,8 +19,9 @@ const Login = () => {
         firebase.auth()
   .signInWithPopup(provider)
   .then((result) => {
+   
     var user = result.user;
-    setLoginUser({name:user.displayName,email:user.email})
+    setLoginUser({name:user.displayName,email:user.email,role:''})
     history.replace(from);
 
   }).catch((error) => {

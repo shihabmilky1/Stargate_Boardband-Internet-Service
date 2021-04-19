@@ -1,12 +1,12 @@
 import React, { useContext } from 'react';
-import Sidebar from '../../Shared/Sidebar/Sidebar';
+import Sidebar from '../../../Shared/Sidebar/Sidebar';
 import { useForm } from "react-hook-form";
-import creditCard from '../../../images/credit-card.png'
-import PaymentProcess from '../../Payment/PaymentProcess/PaymentProcess';
+import creditCard from '../../../../images/credit-card.png'
+import PaymentProcess from '../../../Payment/PaymentProcess/PaymentProcess';
 import { useState } from 'react';
 import { useEffect } from 'react';
 import { useParams } from 'react-router';
-import { UserContext } from '../../../App';
+import { UserContext } from '../../../../App';
 const Book = () => {
     const { serviceName } = useParams();
     const [loginUser,setLoginUser] = useContext(UserContext)
@@ -55,7 +55,9 @@ const Book = () => {
                     <div className="col-md-8  pt-5 mx-auto" style={{ display: customerData ? 'none' : 'block', transition: 'all 1s' }}>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input defaultValue={loginUser.name} type="text" className="form-control my-3" style={{ border: '0', borderBottom: '1px solid #339AF0', borderRadius: '0' }} placeholder="Name" {...register("name", { required: true })} />
-                            {errors.email && <small style={{ color: "red" }}>This field is required</small>}
+                            {errors.name && <small style={{ color: "red" }}>This field is required</small>}
+                            <input type="number" defaultValue={loginUser.email} className="form-control my-3" style={{ border: '0', borderBottom: '1px solid #339AF0', borderRadius: '0' }} placeholder="Phone" {...register("phone", { required: true })} />
+                            {errors.phone && <small style={{ color: "red" }}>This field is required</small>}
                             <input type="email" defaultValue={loginUser.email} className="form-control my-3" style={{ border: '0', borderBottom: '1px solid #339AF0', borderRadius: '0' }} placeholder="Email" {...register("email", { required: true })} />
                             {errors.email && <small style={{ color: "red" }}>This field is required</small>}
                             <table class="table table-borderless">

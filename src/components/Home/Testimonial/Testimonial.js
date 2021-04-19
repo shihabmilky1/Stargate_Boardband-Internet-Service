@@ -10,12 +10,6 @@ const Testimonial = () => {
         .then(res => res.json())
         .then(data => serCustomerFeedback(data))
     },[])
-    const breakPoints = [
-  { width: 1, itemsToShow: 1 },
-  { width: 550, itemsToShow: 2, itemsToScroll: 2 },
-  { width: 768, itemsToShow: 3 },
-  { width: 1200, itemsToShow: 4 }
-];
     return (
         <section style={{paddingBottom:'100px',paddingTop:'100px'}}>
             <div className="container">

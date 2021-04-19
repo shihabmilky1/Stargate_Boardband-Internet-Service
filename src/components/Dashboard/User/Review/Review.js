@@ -1,7 +1,7 @@
 import React, { useContext, useState } from 'react';
-import Sidebar from '../../Shared/Sidebar/Sidebar';
+import Sidebar from '../../../Shared/Sidebar/Sidebar';
 import { useForm } from "react-hook-form";
-import { UserContext } from '../../../App';
+import { UserContext } from '../../../../App';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {  faCloudUploadAlt} from '@fortawesome/free-solid-svg-icons'
 const axios = require('axios').default;

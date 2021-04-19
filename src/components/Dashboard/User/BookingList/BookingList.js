@@ -1,13 +1,16 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { UserContext } from '../../../App';
-import Sidebar from '../../Shared/Sidebar/Sidebar';
+import { UserContext } from '../../../../App';
 import BookingTable from '../BookingTable/BookingTable';
-
+import Sidebar from '../../../Shared/Sidebar/Sidebar';
 const BookingList = () => {
     const [loginUser, setLoginUser] = useContext(UserContext)
     const [bookingList, setBookingList] = useState([])
     useEffect(() => {
-        fetch('http://localhost:3001/getOrder?email=' + loginUser.email)
+        fetch('http://localhost:3001/getOrder',{
+            method:'POST',
+            headers:{'Content-Type':'application/json'},
+            body: JSON.stringify({email: loginUser.email})
+        })
             .then(res => res.json())
             .then(data => setBookingList(data))
     }, [bookingList])
@@ -16,12 +19,12 @@ const BookingList = () => {
             <Sidebar></Sidebar>
             <div className="container">
                 <div className="row">
-                    {bookingList.length === 0 ? <div className="text-center" style={{ paddingBottom: '100px', paddingTop: '100px' }}><div class="spinner-border text-primary" role="status">
-                        <span class="visually-hidden">Loading...</span>
-                    </div></div>
+                    {bookingList.length === 0 ? <div className="text-center" style={{ paddingBottom: '100px', paddingTop: '100px' }}>
+                        <h1 className="">You Have No Order</h1>
+                    </div>
                         :
                         <div className="col-md-10 mx-auto mt-5">
-                            <table class="table table-borderless">
+                            <table className="table table-borderless">
                                 <thead>
                                     <tr>
                                         <th>Service</th>
