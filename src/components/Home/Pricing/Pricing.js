@@ -5,7 +5,7 @@ import PricingCard from '../PricingCard/PricingCard';
 const Pricing = () => {
     const [pricingCard,setPricingCard] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:3001/service')
+        fetch('https://intense-reef-39470.herokuapp.com/service')
         .then(res => res.json())
         .then(data => setPricingCard(data))
     },[])

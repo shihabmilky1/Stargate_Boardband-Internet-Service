@@ -6,7 +6,7 @@ import TestimonialCard from '../TestimonialCard/TestimonialCard';
 const Testimonial = () => {
     const [customerFeedback,serCustomerFeedback] = useState([])
     useEffect(() => {
-        fetch('http://localhost:3001/getFeedback')
+        fetch('https://intense-reef-39470.herokuapp.com/getFeedback')
         .then(res => res.json())
         .then(data => serCustomerFeedback(data))
     },[])

@@ -10,7 +10,7 @@ const ServiceDetail = () => {
     const history = useHistory()
     const [service,setService] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:3001/service/${name}`)
+        fetch(`https://intense-reef-39470.herokuapp.com/service/${name}`)
         .then(res => res.json())
         .then(data => setService(data))
     },[])
@@ -19,7 +19,7 @@ const ServiceDetail = () => {
     }
     const [subscribeEmail,setSubscribeEmail] = useState(null);
     const handleSubmit = e => {
-        fetch('http://localhost:3001/subscribe',{
+        fetch('https://intense-reef-39470.herokuapp.com/subscribe',{
             method: 'POST',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({email:subscribeEmail})

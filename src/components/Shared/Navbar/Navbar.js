@@ -1,9 +1,19 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
 import './Navbar.css'
 const Navbar = () => {
   const [loginUser,setLoginUser] = useContext(UserContext)
+    const [admin,setAdmin] = useState(false)
+    useEffect(()=>{
+      fetch('https://intense-reef-39470.herokuapp.com/ifAdmin',{
+        method: 'POST',
+        headers:{'Content-Type': 'application/json'},
+        body: JSON.stringify({email: loginUser.email})
+      })
+      .then(res => res.json())
+      .then(data => setAdmin(data))
+    },[])
     return (
         <>
             <nav className="navbar navbar-expand-lg ">
@@ -24,7 +34,7 @@ const Navbar = () => {
           <a className="nav-link" href="#contact">Contact</a>
         </li>
         <li className="nav-item px-3">
-          <Link className="nav-link" to="dashboard/bookingList">Dashboard</Link>
+          <Link className="nav-link" to="/dashboard/bookingList">Dashboard</Link>
         </li>
       </ul>
       <div>

@@ -5,22 +5,22 @@ import OrderTable from '../OrderTable/OrderTable';
 
 const OrderList = () => {
     const [loginUser, setLoginUser] = useContext(UserContext)
-    const [bookingList, setBookingList] = useState([])
+    const [orderList, setOrderList] = useState([])
     useEffect(() => {
-        fetch('http://localhost:3001/getOrder',{
+        fetch('https://intense-reef-39470.herokuapp.com/getOrder',{
             method:'POST',
             headers:{'Content-Type':'application/json'},
             body: JSON.stringify({email: loginUser.email})
         })
             .then(res => res.json())
-            .then(data => setBookingList(data))
-    }, [bookingList])
+            .then(data => setOrderList(data))
+    }, [orderList])
     return (
         <section>
         <Sidebar></Sidebar>
         <div className="container">
             <div className="row">
-                {bookingList.length === 0 ? <div className="text-center" style={{ paddingBottom: '100px', paddingTop: '100px' }}>
+                {orderList.length === 0 ? <div className="text-center" style={{ paddingBottom: '100px', paddingTop: '100px' }}>
                     <h1 className="">You Have No Order</h1>
                 </div>
                     :
@@ -38,7 +38,7 @@ const OrderList = () => {
                                 </tr>
                             </thead>
                             <tbody>
-                                {bookingList.map(booking => <OrderTable key={booking._id} booking={booking}></OrderTable>)}
+                                {orderList.map(service => <OrderTable key={service._id} service={service}></OrderTable>)}
                             </tbody>
                         </table>
                     </div>}

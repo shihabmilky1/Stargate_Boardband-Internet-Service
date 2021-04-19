@@ -30,7 +30,7 @@ const Book = () => {
             service,
             process: 'Pending'
         }
-        fetch('http://localhost:3001/orderService', {
+        fetch('https://intense-reef-39470.herokuapp.com/orderService', {
             method: 'POST',
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(bookingDetail)
@@ -43,7 +43,7 @@ const Book = () => {
             })
     };
     useEffect(() => {
-        fetch(`http://localhost:3001/service/${serviceName}`)
+        fetch(`https://intense-reef-39470.herokuapp.com/service/${serviceName}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [])
