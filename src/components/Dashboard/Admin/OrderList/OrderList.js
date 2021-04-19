@@ -25,6 +25,7 @@ const OrderList = () => {
                 </div>
                     :
                     <div className="col-md-10 mx-auto mt-5">
+                        <h4 className="fw-bold mb-5">Order List</h4>
                         <table className="table table-borderless table-responsive">
                             <thead>
                                 <tr>

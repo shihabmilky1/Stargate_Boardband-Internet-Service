@@ -24,6 +24,7 @@ const BookingList = () => {
                     </div>
                         :
                         <div className="col-md-10 mx-auto mt-5">
+                            <h4 className="fw-bold mb-5">Booking List</h4>
                             <table className="table table-borderless">
                                 <thead>
                                     <tr>

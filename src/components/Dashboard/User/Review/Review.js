@@ -55,6 +55,7 @@ const Review = () => {
             <div className="container">
                 <div className="row">
                     <div className="col-md-8 mx-auto mt-5 pt-5">
+                    <h4 className="fw-bold mb-5">Review</h4>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input type="text" className="form-control my-3" style={{ border: '0', border: '1px solid #339AF0', borderRadius: '0' }} placeholder="Your Name" {...register("name", { required: true })} />
                             {errors.name && <small style={{ color: "red" }}>This field is required</small>}

@@ -57,14 +57,14 @@ const Sidebar = () => {
       </Link>
     </li>
     <li>
-      <a href="#">
-        <i className="fa fa-cog icon" aria-hidden="true"></i> Settings
-      </a>
+      <Link to="/dashboard/admin/addService">
+        <i className="fal fa-plus icon" aria-hidden="true"></i> Add Service
+      </Link>
     </li>
     <li>
-      <a href="#">
-        <i className="fa fa-info-circle icon" aria-hidden="true"></i> Information
-      </a>
+      <Link to="/dashboard/admin/makeAdmin">
+        <i className="fal fa-user-plus icon" aria-hidden="true"></i> Make Admin
+      </Link>
     </li>
     </div>}
   </ul>

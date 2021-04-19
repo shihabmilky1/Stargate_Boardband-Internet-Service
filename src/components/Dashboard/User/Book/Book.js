@@ -53,6 +53,7 @@ const Book = () => {
            {serviceName === ':serviceName' ?  <h1 style={{fontWeight: 'bold',position: 'absolute',top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }}>Go to homepage and select a service</h1>  : <div className="container-fluid" >
                 <div className="row ">
                     <div className="col-md-8  pt-5 mx-auto" style={{ display: customerData ? 'none' : 'block', transition: 'all 1s' }}>
+                    <h4 className="fw-bold mb-5">Book</h4>
                         <form onSubmit={handleSubmit(onSubmit)}>
                             <input defaultValue={loginUser.name} type="text" className="form-control my-3" style={{ border: '0', borderBottom: '1px solid #339AF0', borderRadius: '0' }} placeholder="Name" {...register("name", { required: true })} />
                             {errors.name && <small style={{ color: "red" }}>This field is required</small>}
