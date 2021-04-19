@@ -53,7 +53,7 @@ const OrderTable = ({service}) => {
                 <div className="d-flex justify-content-between align-items-center">
                 <select disabled={!admin} onChange={(e)=>handleStatus(e,service._id)} name="" id="" className={`fw-bold text-${status}`} style={{border: '0',outline: 'none'}} >
                     <option className={`text-danger fw-bold`}  value={service.process}>{service.process}</option>
-                    <option className={`text-danger fw-bold`} value="Pending">Pending</option>
+                    <option className={`text-danger fw-bold badge`} value="Pending">Pending</option>
                     <option className={`text-warning fw-bold`} value="OnGoing">OnGoing</option>
                     <option className={`text-success fw-bold`} value="Success">Success</option>
                 </select>

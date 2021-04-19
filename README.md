@@ -1,71 +1,25 @@
-# Getting Started with Create React App
+<h1>Stargate Broadband Internet Connection</h1>
+<a herf="https://stargate-broadband-connection.web.app">Live Site</a>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4>How To Use Our Site</h4>
+<p>This a Broadband Internet Connection service provider company website. every user can buy our plan stay in your house or anywhere. at now we provide 3 best plan in our site. you can chose your best plan. if you order our plan then you can see our home page services section and chose your plan click buy now when you click buy now then we will go login page if already you not login in our site. after  login you can see detail your choose plan and also you see order now button and click you will go order page submit your name phone email and you see service title mbps and charge Full fill our requirement form and submit when submit form and you pay service charge on Card. We have user dashboard and you can see top left corner a sidebar, click and see dashboard navigation. we can some  discuss dashboard we have 3 pages for user first book when you select service then you see this page.
+dashboard another link Booking list when you go to Booking list we see your order and order status, at last you can see review link if you like our service you can send you opinion on our service in review section</p>
 
-## Available Scripts
+<h4>Admin Dashboard</h4>
+<p>if any admin login in dashboard admin can see order list and order status, we have 3 status pending,ongoing and success, our work dependency change this status. admin also see add new service in dashboard. admin can manage a service in dashboard, And Admin can make add another admin</p>
 
-In the project directory, you can run:
+<h3>Features</h3>
+<ul>
+<li>Admin Dashboard</li>
+<li>User Dashboard</li>
+<li>Contact Us</li>
+<li>User Friendly</li>
+<li>more</li>
+</ul>
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# complete-website-client-shihabmilky1" 
+<h4>This Site Build By</h4>
+<p>HTML</p>
+<p>CSS</p>
+<p>REACT JS</p>
+<p>NODE JS</p>
+<p>EXPRESS JS</p>
