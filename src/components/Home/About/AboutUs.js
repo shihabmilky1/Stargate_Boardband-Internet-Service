@@ -46,7 +46,7 @@ const AboutUs = () => {
                         <div className="per-second-section-price d-flex align-items-center justify-content-center">
                             <div>
                             <span className="text-left">Just</span>
-                            <h2 className="fw-bold">$23</h2>
+                            <h2 className="fw-bold">$24</h2>
                             </div>
                         </div>
                     </div>
