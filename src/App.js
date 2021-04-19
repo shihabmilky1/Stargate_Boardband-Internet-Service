@@ -15,6 +15,7 @@ import Book from './components/Dashboard/User/Book/Book'
 import OrderList from './components/Dashboard/Admin/OrderList/OrderList';
 import AddService from './components/Dashboard/Admin/AddService/AddService';
 import MakeAdmin from './components/Dashboard/Admin/MakeAdmin/MakeAdmin';
+import ManageService from './components/Dashboard/Admin/ManageService/ManageService';
 export const UserContext = createContext()
 function App() {
 const [loginUser,setLoginUser] = useState({})
@@ -51,6 +52,9 @@ const [loginUser,setLoginUser] = useState({})
      </PrivetRoute>
      <PrivetRoute path="/dashboard/admin/makeAdmin">
        <MakeAdmin></MakeAdmin>
+     </PrivetRoute>
+     <PrivetRoute path="/dashboard/admin/manageService">
+       <ManageService></ManageService>
      </PrivetRoute>
    </Switch>
     </Router>

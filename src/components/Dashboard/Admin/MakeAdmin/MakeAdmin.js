@@ -4,7 +4,19 @@ import { useForm } from "react-hook-form";
 
 const MakeAdmin = () => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit = data => {}
+    const onSubmit = data => {
+        fetch('http://localhost:3001/makeAdmin',{
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({email:data.email,role:'admin'})
+        })
+        .then(res => res.json())
+        .then(data => {
+            if (data) {
+                alert('Success')
+            }
+        })
+    }
     return (
         <section>
               <Sidebar></Sidebar>

@@ -66,6 +66,11 @@ const Sidebar = () => {
         <i className="fal fa-user-plus icon" aria-hidden="true"></i> Make Admin
       </Link>
     </li>
+    <li>
+      <Link to="/dashboard/admin/manageService">
+        <i className="fas fa-th-large icon" aria-hidden="true"></i> Manage Service
+      </Link>
+    </li>
     </div>}
   </ul>
 </div>
