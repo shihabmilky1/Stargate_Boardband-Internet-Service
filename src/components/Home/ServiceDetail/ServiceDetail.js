@@ -5,6 +5,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import {faCheckCircle } from '@fortawesome/free-solid-svg-icons'
 import Footer from '../../Shared/Footer/Footer/Footer';
 import ServiceIcons from '../../Shared/ServieIcons/ServiceIcons';
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 const ServiceDetail = () => {
     const {name} = useParams();
     const history = useHistory()
@@ -27,7 +29,9 @@ const ServiceDetail = () => {
         .then(res => res.json())
         .then(data => {
             if(data){
-                alert('Thank You For Your Subscription')
+                toast.success('success',{
+                    position: 'Thank You For Your Subscription'
+                });
             }
         })
         e.preventDefault();
@@ -85,6 +89,7 @@ const ServiceDetail = () => {
             </div>
         </section>}
         {service.length !== 0 && <Footer></Footer>}
+        <ToastContainer />
         </>
     );
 };
