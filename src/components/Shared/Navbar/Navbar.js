@@ -1,6 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { UserContext } from '../../../App';
+import firebase from "firebase/app";
+import "firebase/auth";
 import './Navbar.css'
 const Navbar = () => {
   const [loginUser,setLoginUser] = useContext(UserContext)
@@ -14,6 +16,14 @@ const Navbar = () => {
       .then(res => res.json())
       .then(data => setAdmin(data))
     },[])
+    const handleSigOut = () => {
+      firebase.auth().signOut().then(() => {
+        setLoginUser({})
+        // Sign-out successful.
+      }).catch((error) => {
+        // An error happened.
+      });
+    }
     return (
         <>
             <nav className="navbar navbar-expand-lg ">
@@ -41,8 +51,11 @@ const Navbar = () => {
       {!loginUser.email && <div className=" ms-auto">
           <Link to="/login" className="btn my-btn" >Login</Link>
         </div>}
-      {loginUser.email && <div className=" ms-auto">
-          <button onClick={()=> setLoginUser({})} className="btn my-btn" >Logout</button>
+      {loginUser.email && <div className="ms-auto align-items-center">
+         <div className="d-flex justify-content-center align-items-center">
+         <h5 className="text-white fw-bold">Welcome</h5><h6 className="text-white fw-bold ms-2">{loginUser.name}</h6>
+         </div>
+          <button onClick={handleSigOut} className="btn my-btn" >Logout</button>
         </div>}
       </div>
     </div>

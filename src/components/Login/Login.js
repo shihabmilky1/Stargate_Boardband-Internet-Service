@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import firebase from "firebase/app";
 import "firebase/auth";
 import firebaseConfig from './firebase.config';
@@ -20,14 +20,26 @@ const Login = () => {
   .signInWithPopup(provider)
   .then((result) => {
    
-    var user = result.user;
+    const user = result.user;
     setLoginUser({name:user.displayName,email:user.email,role:''})
     history.replace(from);
 
   }).catch((error) => {
-    var errorMessage = error.message;
+    const errorMessage = error.message;
   });
     }
+    useEffect(() => {
+        firebase.auth().onAuthStateChanged(myUser=>{
+            const user = myUser;
+           if(myUser){
+            setLoginUser({name:user.displayName,email:user.email,image:user.photoURL});
+            history.replace(from);
+           }
+           else{
+               console.log('hi')
+           }
+        })
+    },[])
     return (
         <section>
             <div className="container">
